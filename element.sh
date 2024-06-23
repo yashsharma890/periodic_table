@@ -13,7 +13,7 @@ if [[ $1 ]]; then
         ELEMENT=$($PSQL "SELECT e.atomic_number, e.name, e.symbol, t.type, p.atomic_mass, p.melting_point_celsius, p.boiling_point_celsius 
                          FROM elements e 
                          INNER JOIN properties p USING(atomic_number) 
-                         INNER JOIN types t ON p.type_id=t.type_ 
+                         INNER JOIN types t ON p.type_id=t.type_id 
                          WHERE e.atomic_number=$1")
     fi
 
