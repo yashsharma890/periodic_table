@@ -220,7 +220,7 @@ ALTER TABLE ONLY public.types
 -- Name: properties properties_atomic_number_fkey; Type: FK CONSTRAINT; Schema: public; Owner: freecodecamp
 --
 
-ALTER TABLE ONLY public.properties
+ALTER TABLE ONLY public.propertie
     ADD CONSTRAINT properties_atomic_number_fkey FOREIGN KEY (atomic_number) REFERENCES public.elements(atomic_number);
 
 
